@@ -820,6 +820,14 @@ input::placeholder {
     border: 1px solid var(--color-alpha-dark);
 }
 
+.c-toggle__label:hover .c-toggle__input {
+    border: 1px solid var(--color-alpha-x-light);
+}
+
+.c-toggle__label:hover .c-toggle__input--alternative {
+    border: 1px solid var(--color-alpha-x-light);
+}
+
 .c-toggle__checkbox-hidden:checked+.c-toggle__label .c-toggle__input::after {
     transform: translateX(24px);
 }
@@ -836,6 +844,76 @@ input::placeholder {
 .c-toggle__input:focus {
     border: 1px solid var(--color-alpha-x-light);
     box-shadow: var(--focus-shadow);
+}
+
+/*Alternative toggle*/
+
+.c-toggle__input--alternative {
+    width: 40px;
+    height: 20px;
+    align-items: center;
+    background-color: var(--color-neutral-xxx-light);
+    border-color: none;
+}
+
+.c-toggle__input--alternative::after {
+    transform: translateX(-4px);
+    border: 1px solid white;
+    box-shadow: var(--focus-shadow);
+}
+
+.c-toggle__checkbox-hidden:checked+.c-toggle__label .c-toggle__input--alternative::after {
+    transform: translateX(20px);
+    background-color: white;
+    border: 1px solid white;
+}
+
+.c-toggle__checkbox-hidden:focus+.c-toggle__label .c-toggle__input--alternative::after {
+    border-color: white;
+}
+
+.c-toggle__checkbox-hidden:active+.c-toggle__label .c-toggle__input--alternative::after {
+    border-color: white;
+    background-color: white;
+}
+
+.c-toggle__label--inverted {
+    margin-right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.c-toggle-list__item {
+    margin-right: 0;
+}
+
+.c-toggle-list__item+.c-toggle-list__item {
+    padding-top: 12px;
+    border-top: 1px solid var(--color-neutral-xxx-light);
+    margin-bottom: 12px;
+}
+
+.c-custom-select {
+    display: block;
+    position: relative;
+}
+
+.c-custom-select__input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 6px;
+}
+
+.c-custom-select__symbol {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    right: 12px;
+    pointer-events: none;
+    fill: var(--color-neutral-x-light)
 }
 
 /*------------------------------------*\
